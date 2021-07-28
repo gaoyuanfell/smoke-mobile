@@ -1,0 +1,18 @@
+{
+  "printWidth": 120,
+  "useTabs": false,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "semi": true,
+  "arrowParens": "always",
+  "parsers": {
+    ".jsx": "flow",
+    ".scss": "scss",
+    ".ts": "typescript",
+    ".less": "css",
+    ".vue": "vue",
+    ".nvue": "vue",
+    ".ux": "vue",
+    ".yml": "yaml"
+  }
+}

@@ -1,0 +1,91 @@
+div[route-id="about"] {
+  background-color: #ebecf0;
+}
+
+.about_bg {
+  height: 1366px;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/about_1.png);
+  overflow: hidden;
+
+  .about-info-box {
+    width: 629px;
+    height: 1187px;
+    // background-color: #000000b3;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 106px;
+    margin-left: 58px;
+    padding: 108px 58px 0 58px;
+    h1:nth-child(1) {
+      color: #ffffff;
+      font-family: "Alibaba Pu Hui Ti H";
+      font-size: 93px;
+      font-weight: bold;
+      margin: 0;
+    }
+    h1:nth-child(2) {
+      color: #ffffff;
+      font-family: "Alibaba Pu Hui Ti";
+      font-size: 75px;
+      font-weight: bold;
+      margin: 0;
+      margin-top: 33px;
+      margin-bottom: 49px;
+    }
+    p {
+      color: #ffffff;
+      font-family: "Alibaba Pu Hui Ti R";
+      font-size: 30px;
+      font-weight: 400;
+      text-indent: 60px;
+      text-align: justify;
+      line-height: 1.8;
+      span {
+        color: #f28530;
+      }
+    }
+  }
+}
+
+.about_info {
+  padding-top: 84px;
+  h1 {
+    color: #353535;
+    font-family: "Alibaba Pu Hui Ti";
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  p {
+    color: #6b6b6b;
+    font-family: "Alibaba Pu Hui Ti R";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .about-img-list {
+    margin-top: 45px;
+    margin-bottom: 100px;
+    img {
+      width: 154px;
+      height: 221px;
+      margin: 0 17px;
+    }
+  }
+  .about-img-list-2 {
+    margin-top: 78px;
+    margin-bottom: 165px;
+    img {
+      width: 406px;
+      height: 287px;
+      margin: 0 27px;
+    }
+  }
+}

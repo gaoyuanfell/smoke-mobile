@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="applicable-device" content="mobile" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="keywords" content="FLOCO,FLOCO乐氪,FLOCO电子烟官网,FLOCO加盟,FLOCO烟弹,FLOCO代理" />
+    <meta name="description" content="未成年人禁止访问本网站,FLOCO乐氪隶属于上海银橙科技股份有限公司,目前已推出换弹式电子烟、一次性电子烟、多口味烟弹等核心产品,让FLOCO开启你的灵感之旅,一起乐享每“氪”" />
+    <title>FLOCO乐氪</title>
+    <link rel="icon" href="/favicon.ico" />
+    <script>
+      if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i)) {
+        //显示移动端的代码
+      } else {
+        //显示非移动端的代码
+        window.location.href = '/'
+      }
+    </script>
+    <script src="vue/vue.min.js"></script>
+    <script>
+      function fontSizeResize() {
+        var t = 1124;
+        var a = (document.documentElement.clientWidth / t) * 100;
+        document.documentElement.style.fontSize = "".concat(a, "px");
+        var r = /Android|webOS|iPhone|iPad|BlackBerry|ucweb|midp|rv:1.2.3.4|windows mobile|redmi|Redmi/i.test(
+          navigator.userAgent
+        );
+        // if (r) {
+          // document.documentElement.style.position = "fixed";
+          // document.documentElement.style.overflow = "hidden";
+        // }
+        var n = parseFloat(window.getComputedStyle(document.documentElement).fontSize);
+        var i = a / n;
+        if (1 === i) return;
+        document.documentElement.style.fontSize = "".concat(a * i, "px");
+      }
+      window.addEventListener("resize", () => {
+        fontSizeResize();
+      });
+      fontSizeResize();
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="header flex-center">
+        <div class="menu" v-on:click="show">
+          <div class="menu-box" v-bind:class="{ 'close': menu, 'open': !menu }">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="logo"></div>
+      </div>
+      <div class="menu-list flex-center" v-on:click="show" v-bind:class="{ active: menu }">
+        <a class="menu-list-item" route-link="home" href="#home">首页</a>
+        <a class="menu-list-item father" v-on:click.stop="()=>{}">产品</a>
+        <a class="menu-list-item child" route-link="product-s1" href="#product-s1">S1换弹式雾化器</a>
+        <a class="menu-list-item child" route-link="product-s5" href="#product-s5">S5换弹式雾化器</a>
+        <a class="menu-list-item child" route-link="product-s10" href="#product-s10">S10一次性雾化棒</a>
+        <a class="menu-list-item" route-link="store" href="#store">店铺展示</a>
+        <a class="menu-list-item" route-link="about" href="#about">公司简介</a>
+        <a class="menu-list-item" route-link="join" href="#join">招商加盟</a>
+      </div>
+      <div class="header-box"></div>
+    </div>
+    <!-- 首页 -->
+    <template route-id="home">
+      <div route-id="home">
+        <section class="home_swiper">
+          <div class="swiper-box" v-el:swiper v-on:click="transformation()">
+            <div class="swiper-item" v-bind:class="{ active: number === 0 }">
+              <div class="info">
+                <p>乐享每一“氪”！</p>
+                <p>FLOCO乐氪&nbsp;&nbsp;S10一次性雾化棒</p>
+              </div>
+            </div>
+            <div class="swiper-item" v-bind:class="{ active: number === 1 }">
+              <div class="info">
+                <p>乐享每一“氪”！</p>
+                <p>FLOCO乐氪 S1换弹式雾化器</p>
+              </div>
+            </div>
+            <div class="swiper-item" v-bind:class="{ active: number === 2 }">
+              <div class="info">
+                <p>乐享每一“氪”！</p>
+                <p>FLOCO乐氪 S5换弹式雾化器</p>
+              </div>
+            </div>
+          </div>
+          <div class="jing-gao flex-center">
+            <i class="icon-jing-gao"></i>
+            <p class="jing-gao-info">未成年人禁止使用</p>
+          </div>
+        </section>
+        <section class="home_brand">
+          <!-- <h3>BRANDSTORY</h3>
+          <h1>品牌故事</h1> -->
+          <img src="src/assets/img/home_brand_1.png">
+          <p>
+            两年前，银橙科技进入电子烟行业并建立了电子烟品牌FLOCO乐氪，经过一年多的筹备，多次检测调试，终于为广大消费者打造出了S1、S5、S10<span>三大系列</span>的替烟产品。
+          </p>
+          <p>
+            我们始终坚信<span>灵感为个性而生</span>，千篇一律终究平淡无趣，完美主义令人厌倦，每个存在的个体都是<span>独一无二</span>，FLOCO乐氪因为科技让你<span>与众不同</span>，只有被发现，被欣赏，被需要方能更显珍贵，让FLOCO开启你的灵感之旅，<span
+              >一起乐享每"氪"！</span
+            >
+          </p>
+          <!-- <div class="img">
+            <img src="./src/assets/img/home_dianziyan.png" />
+          </div> -->
+        </section>
+        <section class="home_product">
+          <div class="product-bg flex-center">
+            <p>产品介绍</p>
+            <p>ABOUT PRODUCT<span class="letter-spacing-0">S</span></p>
+          </div>
+          <div class="product-list">
+            <div class="product-list-item">
+              <h1>S1换弹式雾化器</h1>
+              <div class="product-list-img">
+                <img src="./src/assets/img/home_product_1.png" />
+                <a href="#product-s1" class="product-list-link flex-center">
+                  <span>了解更多</span>
+                </a>
+              </div>
+            </div>
+            <div class="product-list-item">
+              <h1>S5换弹式雾化器</h1>
+              <div class="product-list-img">
+                <img src="./src/assets/img/home_product_2.png" />
+                <a href="#product-s5" class="product-list-link flex-center">
+                  <span>了解更多</span>
+                </a>
+              </div>
+            </div>
+            <div class="product-list-item">
+              <h1>S10一次性雾化棒</h1>
+              <div class="product-list-img">
+                <img src="./src/assets/img/home_product_3.png" />
+                <a href="#product-s10" class="product-list-link flex-center">
+                  <span>了解更多</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home_warn">
+          <div class="warn-info">
+            <img src="./src/assets/img/home_footer_1.png" />
+          </div>
+          <img src="./src/assets/img/home_footer_2.png" />
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 产品 S1换弹式雾化器 -->
+    <template route-id="product-s1">
+      <div route-id="product-s1">
+        <section class="product_img">
+          <img src="/src/assets/img/product_1.png" />
+        </section>
+        <section class="product_info">
+          <h1>S1换弹式雾化器</h1>
+          <ul>
+            <li>杆身采用铝镁合金镂空精雕挤压一体成型，氛围灯炫彩夺目。</li>
+            <li>阳极氧化镜面渐变烤漆工艺，外观精美，手感舒适。</li>
+            <li>低电压大容量纯钴锂电池，高效充电，随时享用，省心尽兴。</li>
+            <li>一次成型烧结工艺瓷芯发热技术，锁油更强，雾化更快，口感更细。</li>
+            <li>完备的充电过流，过压，短路保护，电池低电压提示，使用更安心。</li>
+          </ul>
+          <h3>S1产品参数：</h3>
+          <div class="product-info-item-box flex-center">
+            <div class="product-info-item">
+              <p>机身尺寸：110*20*12mm</p>
+              <p>杆身材质：铝合金</p>
+              <p>电池容量：350mAh</p>
+              <p>烟油容量：1.8ml</p>
+            </div>
+            <div class="product-info-item">
+              <p>雾芯阻值：1.2欧</p>
+              <p>充电电压：5V</p>
+              <p>充电电流：1A</p>
+              <p>杆身重量：18g</p>
+            </div>
+          </div>
+        </section>
+        <section class="product_detail">
+          <div class="product-detail">
+            <h1>C1雾化弹</h1>
+            <ul>
+              <li>烟嘴：烟嘴选用不含双酚A（BPA）的PCTG材质，精雕细琢的烟嘴双弧面设计，更加贴合嘴型。</li>
+              <li>雾化芯：采用新一代一次性烧结成型陶瓷芯和适配烟油的技术，锁油更强，雾化更快，品质稳定，口感饱满。</li>
+              <li>烟油：全球著名原产国植物香料，欧美超临界萃取蒸馏技术，国际知名大品牌蔬菜甘油。</li>
+            </ul>
+            <div class="product-detail-img flex-center">
+              <img src="./src/assets/img/product_1_1.png" alt="" />
+              <img src="./src/assets/img/product_1_2.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="home_warn">
+          <div class="warn-info">
+            <img src="./src/assets/img/home_footer_1.png" />
+          </div>
+          <img src="./src/assets/img/home_footer_2.png" />
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 产品 S5换弹式雾化器 -->
+    <template route-id="product-s5">
+      <div route-id="product-s5">
+        <section class="product_img">
+          <img src="/src/assets/img/product_2.png" />
+        </section>
+        <section class="product_info">
+          <h1>S5换弹式雾化器</h1>
+          <ul>
+            <li>精雕成型阳极氧化工艺，磨砂丝印处理，多重配色，随心而变。</li>
+            <li>曲面流线型设计，温润如玉，方便使用更适合随手把玩。</li>
+            <li>嵌入式磁吸设计，无谓正反，烟弹即插即用，操作简单。</li>
+            <li>烟弹插入震动感知，过量抽吸震动提示，保障您的每一口抽吸。</li>
+            <li>完备的充电过流、过压、短路保护，低电压提示，使用更安心。</li>
+          </ul>
+          <h3>S5产品参数：</h3>
+          <div class="product-info-item-box flex-center">
+            <div class="product-info-item">
+              <p>机身尺寸：113*19*10mm</p>
+              <p>杆身材质：铝合金</p>
+              <p>电池容量：400mAh</p>
+              <p>烟油容量：1.8ml</p>
+            </div>
+            <div class="product-info-item">
+              <p>雾芯阻值：1.2欧</p>
+              <p>充电电压：5V</p>
+              <p>充电电流：1A</p>
+              <p>杆身重量：18g</p>
+            </div>
+          </div>
+        </section>
+        <section class="product_detail">
+          <div class="product-detail">
+            <h1>C5雾化弹</h1>
+            <ul>
+              <li>智能空气动力学陶瓷雾化芯，360度环形加热，雾化更充分。</li>
+              <li>一体成型油仓三重锁油防漏系统，告别漏油渗油困扰。</li>
+              <li>模拟真烟吸阻，保证一颗烟弹抽吸体验自始自终顺滑如新。</li>
+            </ul>
+            <div class="product-detail-img flex-center">
+              <img src="./src/assets/img/product_2_1.png" alt="" />
+              <img src="./src/assets/img/product_2_2.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="home_warn">
+          <div class="warn-info">
+            <img src="./src/assets/img/home_footer_1.png" />
+          </div>
+          <img src="./src/assets/img/home_footer_2.png" />
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 产品 S10一次性雾化棒 -->
+    <template route-id="product-s10">
+      <div route-id="product-s10">
+        <section class="product_img">
+          <img src="/src/assets/img/product_3.png" />
+        </section>
+        <section class="product_info">
+          <h1>S10换弹式雾化器</h1>
+          <ul>
+            <li>完美机身：黄金尺寸比例烟杆，符合人体工学，握感更好。</li>
+            <li>亲肤手感：手感亲肤烤漆工艺，绿色环保，拒绝干涩，不留汗渍。</li>
+            <li>超长续航：500毫安超大容量纯钴A品电池。</li>
+            <li>超大容量：3.2ml的超大烟油量，保证抽吸口数。</li>
+            <li>三重保护：短路保护（SCP）欠压保护（UVLO）过热保护（OTP）。</li>
+            <li>双重防漏：独立安全油仓+硅胶密封帽。</li>
+            <li>进口材质：PCTG有效隔离金属管壁，用料更安全，使用更安心。</li>
+          </ul>
+          <h3>S10产品参数：</h3>
+          <div class="product-info-item-box flex-center">
+            <div class="product-info-item">
+              <p>机身尺寸：104*16mm</p>
+              <p>电池容量：500mAh</p>
+              <p>烟油容量：3.2ml</p>
+              <p>雾芯阻值：1.8欧</p>
+            </div>
+            <div class="product-info-item">
+              <p>抽吸口数：800口</p>
+              <p>杆身材质：302不锈钢</p>
+              <p>充电电压：5V</p>
+              <p>充电电流：1A</p>
+            </div>
+          </div>
+        </section>
+        <section class="product_detail">
+          <div class="product-detail">
+            <h1>丰富口味 多种享受</h1>
+            <div class="crops-list">
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_1.png" />
+                <div class="item-info">
+                  <p>绿豆小冰：</p>
+                  <p>每一口沙软的绿豆刨冰，吃下去是绿豆独有的味道，冰凉解暑，口感舒爽。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_2.png" />
+                <div class="item-info">
+                  <p>风情菠萝：</p>
+                  <p>巴洛克风情菠萝，干爽绵密的细腻口感，酸酸甜甜，冰冰凉凉，果香怡人。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_3.png" />
+                <div class="item-info">
+                  <p>龙井春露：</p>
+                  <p>一杯温润的龙井茶，浓郁的龙井茶香，仿佛置身清晨带着露珠的万亩茶园。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_4.png" />
+                <div class="item-info">
+                  <p>蓝莓之恋：</p>
+                  <p>酸甜莓果口感升级味蕾新体验，浓郁的浆果搭配冰凉薄荷露，酸甜而不腻。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_5.png" />
+                <div class="item-info">
+                  <p>西瓜冰沙：</p>
+                  <p>就像夏天冰西瓜里最甜的那一口，香甜溢满口腔，冰爽香甜，久抽不腻。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_6.png" />
+                <div class="item-info">
+                  <p>爆粒葡萄：</p>
+                  <p>如同颗颗饱满的葡萄在口中爆开的感觉，香气直击喉咙，入口充实爽快。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_7.png" />
+                <div class="item-info">
+                  <p>神奇可乐：</p>
+                  <p>涌入舌尖的刺激感好像瞬间坠入冰凉的深海，可乐的冰爽霸占你的全部味蕾。</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8.png" />
+                <div class="item-info">
+                  <p>冰泉薄荷：</p>
+                  <p>炎炎夏日来上一口透冰泉薄荷，冰爽感淋漓尽致，清凉舒爽到直达全身。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home_warn">
+          <div class="warn-info">
+            <img src="./src/assets/img/home_footer_1.png" />
+          </div>
+          <img src="./src/assets/img/home_footer_2.png" />
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 店铺展示 -->
+    <template route-id="store">
+      <div route-id="store">
+        <section class="store_bg">
+          <h1>STORE</h1>
+          <h1>DISPLAY</h1>
+          <h1>店铺展示</h1>
+          <h3>·专卖店</h3>
+          <div class="img">
+            <img src="src/assets/img/store_2.png" />
+          </div>
+          <h3>·店中店</h3>
+          <div class="img">
+            <img src="src/assets/img/store_1.png" />
+          </div>
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 公司简介 -->
+    <template route-id="about">
+      <div route-id="about">
+        <section class="about_bg">
+          <div class="about-info-box">
+            <h1>ABOUT US</h1>
+            <h1>公司简介</h1>
+            <p>
+              <span>上海银橙科技股份有限公司</span
+              >成立于2008年3月，2014年8月在<span>新三板挂牌</span>。十二年坚实发展，银橙科技已成为一家横跨工业大麻全产业链开发、生物健康膳食研发销售、功能消费电子产品研发销售、行业投资的高新科技集团公司。<span>FLOCO乐氪</span>是银橙科技功能消费电子产品线旗下的电子雾化品牌，公司该业务板块专注于<span>电子雾化替烟产品</span>的研发与销售，具备集设计、生产、销售于一体的全产业链开发与供应链管理体系，致力于为全球电子烟用户打造性能稳定，造型时尚，品质卓越的优秀雾化产品。银橙科技目前是中国电子商会<span
+                >电子烟行业委员会成员单位。</span
+              >
+            </p>
+          </div>
+        </section>
+        <section class="about_info">
+          <h1>研发实力</h1>
+          <p>· 获欧盟电子雾化器CE专业检测认证 · 获美国联邦通信委员会FCC专业检测认证</p>
+          <p>· 整机符合TCT检测 · 烟油获得ROHS认证以及FDA认证</p>
+          <div class="about-img-list flex-center">
+            <img src="src/assets/img/about_item_1.png" />
+            <img src="src/assets/img/about_item_2.png" />
+            <img src="src/assets/img/about_item_3.png" />
+            <img src="src/assets/img/about_item_4.png" />
+            <img src="src/assets/img/about_item_5.png" />
+          </div>
+          <p>· 十余项电子烟专利技术及知识产权 · 几十件相关著作权申请</p>
+          <p>· 上百项国内及国际检测认证 · 累计上千万的研发投入</p>
+          <div class="about-img-list flex-center">
+            <img src="src/assets/img/about_item_6.png" />
+            <img src="src/assets/img/about_item_7.png" />
+            <img src="src/assets/img/about_item_8.png" />
+            <img src="src/assets/img/about_item_9.png" />
+            <img src="src/assets/img/about_item_10.png" />
+          </div>
+          <h1>会员证书</h1>
+          <div class="about-img-list-2 flex-center">
+            <img src="src/assets/img/about_item_11.png" />
+            <img src="src/assets/img/about_item_12.png" />
+          </div>
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 招商加盟 -->
+    <template route-id="join">
+      <div route-id="join">
+        <section class="join_bg">
+          <h1>为什么选择我们？</h1>
+          <p>
+            产品系列齐全，口味丰富多样，技术行业领先，符合欧盟、美国标准。具备完整的设计、生产、销售及售后团队，公司新三板挂牌，技术及资金实力雄厚。极具竞争力的加盟政策让您零负担开店，快速回笼资金！
+          </p>
+          <div class="join-list flex-center">
+            <div class="join-list-item">
+              <h2>低成本</h2>
+              <div class="br"></div>
+              <p>免费加盟</p>
+              <p>最低只需1万</p>
+              <p>即可开店</p>
+            </div>
+            <div class="join-list-item">
+              <h2>高收益</h2>
+              <div class="br"></div>
+              <p>利润看得见</p>
+              <p>年入20-100万</p>
+            </div>
+          </div>
+          <div class="join-list flex-center">
+            <div class="join-list-item">
+              <h2>可预期</h2>
+              <div class="br"></div>
+              <p>平均回本周期</p>
+              <p>3-6个月</p>
+              <p>收入稳定</p>
+            </div>
+            <div class="join-list-item">
+              <h2>全方位</h2>
+              <div class="br"></div>
+              <p>从开店准备</p>
+              <p>到经营支持</p>
+              <p>全方位帮助</p>
+            </div>
+            <div class="join-list-item">
+              <h2>全周期</h2>
+              <div class="br"></div>
+              <p>从前期培训</p>
+              <p>到后期售后</p>
+              <p>全周期维护</p>
+            </div>
+          </div>
+        </section>
+        <section class="join-open-1">
+          <h1>加盟流程</h1>
+          <p>只需5步,最快12天开业</p>
+          <div class="open-list flex-center">
+            <div class="open-list-item flex-center">
+              <div class="img flex-center">
+                <img src="./src/assets/img/join_item_1.png" />
+              </div>
+              <p>申请加盟，一对一服务</p>
+            </div>
+            <div class="open-list-item flex-center">
+              <div class="img flex-center">
+                <img src="./src/assets/img/join_item_2.png" />
+              </div>
+              <p>资质筛选,门店确认</p>
+            </div>
+            <div class="open-list-item flex-center">
+              <div class="img flex-center">
+                <img src="./src/assets/img/join_item_3.png" />
+              </div>
+              <p>现场确认，签订合同</p>
+            </div>
+            <div class="open-list-item flex-center">
+              <div class="img flex-center">
+                <img src="./src/assets/img/join_item_4.png" />
+              </div>
+              <p>开业指导，营销支持</p>
+            </div>
+          </div>
+        </section>
+        <section class="join-open-2">
+          <h1>开店政策</h1>
+          <div class="open-list flex-center">
+            <div class="open-list-item flex-center">
+              <img src="./src/assets/img/join_item_5.png" />
+              <p>免费加盟</p>
+            </div>
+            <div class="open-list-item flex-center">
+              <img src="./src/assets/img/join_item_6.png" />
+              <p>基础物料</p>
+            </div>
+            <div class="open-list-item flex-center">
+              <img src="./src/assets/img/join_item_7.png" />
+              <p>宣传支持</p>
+            </div>
+            <div class="open-list-item flex-center">
+              <img src="./src/assets/img/join_item_8.png" />
+              <p>销售培训</p>
+            </div>
+          </div>
+          <div class="spot">......</div>
+          <h2>更多优惠政策,详情请咨询!</h2>
+          <h3>400-895-6218</h3>
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

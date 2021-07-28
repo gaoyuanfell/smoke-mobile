@@ -1,0 +1,69 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  // background-color: #f4f4f4;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 0.5rem;
+  // height: 100vh;
+  width: 100vw;
+  user-select: none;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
+  // -webkit-overflow-scrolling: touch;
+  font-family: Gilroy-regular, -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blob {
+  font-weight: bold;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jing-gao {
+  .jing-gao-info {
+    color: #141414;
+    font-size: 55px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-family: "Source Han Sans CN - Heavy";
+  }
+}
+
+.icon-jing-gao {
+  width: 93px;
+  height: 83px;
+  display: block;
+  background-image: url(../assets/img/jinggao.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

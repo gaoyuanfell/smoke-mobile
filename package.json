@@ -1,0 +1,34 @@
+{
+  "name": "vite-vue-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve2": "vue-cli-service serve",
+    "build2": "vue-cli-service build",
+    "lint2": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.3.5",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.10",
+    "sass-loader": "^8.0.2",
+    "vite": "^2.3.8",
+    "vite-plugin-compression": "^0.3.1",
+    "vite-plugin-vue2": "^1.7.2",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
