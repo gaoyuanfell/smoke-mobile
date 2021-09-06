@@ -14,7 +14,7 @@ const home = new Vue({
       ++this.number;
       if (this.number < 0) this.number = 2;
       if (this.number >= 3) this.number = 0;
-      this.setIntervalTransformation();
+      // this.setIntervalTransformation();
     },
     setIntervalTransformation() {
       this.setIntervalNum && clearInterval(this.setIntervalNum);
@@ -33,7 +33,7 @@ const home = new Vue({
     },
   },
   ready() {
-    this.setIntervalTransformation();
+    // this.setIntervalTransformation();
     EventUtil.listenTouchDirection(
       this.$els.swiper,
       false,

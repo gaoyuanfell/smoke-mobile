@@ -62,6 +62,17 @@
   .swiper-item:nth-child(3) {
     .info {
       p:nth-child(1) {
+        color: #da3a46;
+      }
+      p:nth-child(2) {
+        color: #da3a46;
+      }
+    }
+    background-image: url(../assets/img/home_swiper_4.jpg);
+  }
+  .swiper-item:nth-child(4) {
+    .info {
+      p:nth-child(1) {
         color: #fff;
       }
     }

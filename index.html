@@ -66,6 +66,7 @@
         <a class="menu-list-item father" v-on:click.stop="()=>{}">产品</a>
         <a class="menu-list-item child" route-link="product-s1" href="#product-s1">S1换弹式雾化器</a>
         <a class="menu-list-item child" route-link="product-s5" href="#product-s5">S5换弹式雾化器</a>
+        <a class="menu-list-item child" route-link="product-s8" href="#product-s8">S8换弹式雾化器</a>
         <a class="menu-list-item child" route-link="product-s10" href="#product-s10">S10一次性雾化棒</a>
         <a class="menu-list-item" route-link="store" href="#store">店铺展示</a>
         <a class="menu-list-item" route-link="about" href="#about">公司简介</a>
@@ -81,19 +82,25 @@
             <div class="swiper-item" v-bind:class="{ active: number === 0 }">
               <div class="info">
                 <p>乐享每一“氪”！</p>
-                <p>FLOCO乐氪&nbsp;&nbsp;S10一次性雾化棒</p>
+                <p>FLOCO乐氪 S1换弹式雾化器</p>
               </div>
             </div>
             <div class="swiper-item" v-bind:class="{ active: number === 1 }">
               <div class="info">
                 <p>乐享每一“氪”！</p>
-                <p>FLOCO乐氪 S1换弹式雾化器</p>
+                <p>FLOCO乐氪 S5换弹式雾化器</p>
               </div>
             </div>
             <div class="swiper-item" v-bind:class="{ active: number === 2 }">
               <div class="info">
                 <p>乐享每一“氪”！</p>
-                <p>FLOCO乐氪 S5换弹式雾化器</p>
+                <p>FLOCO乐氪 S8换弹式雾化器</p>
+              </div>
+            </div>
+            <div class="swiper-item" v-bind:class="{ active: number === 3 }">
+              <div class="info">
+                <p>乐享每一“氪”！</p>
+                <p>FLOCO乐氪&nbsp;&nbsp;S10一次性雾化棒</p>
               </div>
             </div>
           </div>
@@ -107,7 +114,7 @@
           <h1>品牌故事</h1> -->
           <img src="src/assets/img/home_brand_1.png">
           <p>
-            两年前，银橙科技进入电子烟行业并建立了电子烟品牌FLOCO乐氪，经过一年多的筹备，多次检测调试，终于为广大消费者打造出了S1、S5、S10<span>三大系列</span>的替烟产品。
+            两年前，银橙科技进入电子烟行业并建立了电子烟品牌FLOCO乐氪，经过一年多的筹备，多次检测调试，终于为广大消费者打造出了S1、S5、S8、S10<span>四大系列</span>的替烟产品。
           </p>
           <p>
             我们始终坚信<span>灵感为个性而生</span>，千篇一律终究平淡无趣，完美主义令人厌倦，每个存在的个体都是<span>独一无二</span>，FLOCO乐氪因为科技让你<span>与众不同</span>，只有被发现，被欣赏，被需要方能更显珍贵，让FLOCO开启你的灵感之旅，<span
@@ -138,6 +145,15 @@
               <div class="product-list-img">
                 <img src="./src/assets/img/home_product_2.png" />
                 <a href="#product-s5" class="product-list-link flex-center">
+                  <span>了解更多</span>
+                </a>
+              </div>
+            </div>
+            <div class="product-list-item">
+              <h1>S8一次性雾化棒</h1>
+              <div class="product-list-img">
+                <img src="./src/assets/img/home_product_5.png" />
+                <a href="#product-s8" class="product-list-link flex-center">
                   <span>了解更多</span>
                 </a>
               </div>
@@ -189,7 +205,7 @@
               <p>机身尺寸：110*20*12mm</p>
               <p>杆身材质：铝合金</p>
               <p>电池容量：350mAh</p>
-              <p>烟油容量：1.8ml</p>
+              <p>烟油容量：2ml</p>
             </div>
             <div class="product-info-item">
               <p>雾芯阻值：1.2欧</p>
@@ -249,7 +265,7 @@
               <p>机身尺寸：113*19*10mm</p>
               <p>杆身材质：铝合金</p>
               <p>电池容量：400mAh</p>
-              <p>烟油容量：1.8ml</p>
+              <p>烟油容量：2ml</p>
             </div>
             <div class="product-info-item">
               <p>雾芯阻值：1.2欧</p>
@@ -270,6 +286,100 @@
             <div class="product-detail-img flex-center">
               <img src="./src/assets/img/product_2_1.png" alt="" />
               <img src="./src/assets/img/product_2_2.png" alt="" />
+            </div>
+          </div>
+        </section>
+        <section class="home_warn">
+          <div class="warn-info">
+            <img src="./src/assets/img/home_footer_1.png" />
+          </div>
+          <img src="./src/assets/img/home_footer_2.png" />
+        </section>
+        <section class="home_footer flex-center">
+          <p>上海银橙科技股份有限公司</p>
+          <p>地址：上海市徐汇区钦州北路1199号87号楼6楼</p>
+          <p>客服电话：400-8956-218</p>
+          <p>Copyright © 2021,Shanghai YinCheng Technology Co., Ltd.</p>
+          <p>All Rights Reserved. 沪 ICP 备 14036633 号 - 6</p>
+        </section>
+      </div>
+    </template>
+    <!-- 产品 S8一次性雾化棒 -->
+    <template route-id="product-s8">
+      <div route-id="product-s8">
+        <section class="product_img">
+          <img src="/src/assets/img/product_4.png" />
+        </section>
+        <section class="product_info">
+          <h1>S8换弹式雾化器</h1>
+          <ul>
+            <li>口味独特: 网红爆款甜饮品系列, 口口入味, 沁人心脾, 开心满满。</li>
+            <li>娇小身材: 杆身椭圆纤细, 尺寸恰到好处, 娇小女生也能一手掌握。</li>
+            <li>炫彩烤漆: 炫彩渐变手感烤漆烟杆,搭配瓷白烟嘴,彰显高雅气质。</li>
+            <li>超长续航: 350mAh超大容量纯钴A品电池,保证抽吸口数。</li>
+            <li>三重保护: 短路保护(SCP)欠压保护(UVLO)过热保护(OTP)。</li>
+            <li>进口材质: PCTG独立油仓双重防漏设计,用料更安全,使用更畅心。</li>
+          </ul>
+          <h3>S10产品参数：</h3>
+          <div class="product-info-item-box flex-center">
+            <div class="product-info-item">
+              <p>机身尺寸：88*17*11.5mm</p>
+              <p>抽吸口数：500口</p>
+              <p>电池容量：350mAh</p>
+            </div>
+            <div class="product-info-item">
+              <p>杆身材质：302不锈钢</p>
+              <p>烟油容量：2mL</p>
+              <p>雾芯阻值：2欧</p>
+            </div>
+          </div>
+        </section>
+        <section class="product_detail">
+          <div class="product-detail">
+            <h1>丰富口味 多种享受</h1>
+            <div class="crops-list">
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8-1.png" />
+                <div class="item-info">
+                  <p>木瓜牛奶：</p>
+                  <p>清甜香浓的木瓜柔软多汁，细腻软滑的口感让人欲罢不能</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8-2.png" />
+                <div class="item-info">
+                  <p>杨枝甘露：</p>
+                  <p>芒果的甜遇到西柚的酸,香浓软滑的椰浆混合着浓浓的水果香甜</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8-3.png" />
+                <div class="item-info">
+                  <p>芒果紫米：</p>
+                  <p>紫米的糯香，搭配芒果的清甜，好抽到停不下来</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8-4.png" />
+                <div class="item-info">
+                  <p>栀子香柠茶：</p>
+                  <p>芳香浓郁，催人欲醉，轻轻来上一口，令人唇齿留香</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8-5.png" />
+                <div class="item-info">
+                  <p>茉莉抹茶：</p>
+                  <p>茉莉的芬芳衬托出抹茶浓郁丰富的茶香,甘醇解腻</p>
+                </div>
+              </div>
+              <div class="crops-item">
+                <img src="./src/assets/img/product_item_8-6.png" />
+                <div class="item-info">
+                  <p>金桔柠檬茶：</p>
+                  <p>清新的柠檬混合青金桔的酸甜,搭配纯正红茶底,口感自然</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -18,6 +18,12 @@ const router = [
     loaded: false
   },
   {
+    path: "product-s8",
+    name: "product-s8",
+    component: "product-s8",
+    loaded: false
+  },
+  {
     path: "product-s10",
     name: "product-s10",
     component: "product-s10",
